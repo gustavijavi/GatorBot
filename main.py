@@ -31,9 +31,6 @@ bot = commands.Bot(command_prefix='g!', intents=intents)
 # set up riot API key so it can be called for league data
 riot_api_key = os.getenv('RIOT_API_KEY')
 
-# intializes medal api through another github repo to get the user ID
-medalApi = MedalAPI()
-
 # bot booting up event
 @bot.event
 async def on_ready():
