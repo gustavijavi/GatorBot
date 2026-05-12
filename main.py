@@ -35,7 +35,6 @@ riot_api_key = os.getenv('RIOT_API_KEY')
 @bot.event
 async def on_ready():
 
-    '''
     # if data.json file doesn't exist, create one with all the required data storage outline
     if not os.path.exists('data.json'):
         data = {
@@ -45,7 +44,6 @@ async def on_ready():
         
         with open('data.json', 'w') as f:
             json.dump(data, f, indent=4)
-    '''
     
     # changes the bot status message to be a custom message
     await bot.change_presence(activity=discord.CustomActivity(name="wait, im coded ( ͡° ͜ʖ ͡°)"))
