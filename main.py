@@ -50,6 +50,8 @@ async def on_ready():
     # changes the bot status message to be a custom message
     await bot.change_presence(activity=discord.CustomActivity(name="wait, im coded ( ͡° ͜ʖ ͡°)"))
     
+    await bot.tree.sync()
+
     # once all done, bot says it's ready
     print(f"{bot.user.name}, is ready to be a chud")
 
@@ -111,9 +113,9 @@ async def on_message(message):
 
 
 # regular ping command just to test bot
-@bot.command()
-async def ping(ctx):
-    await ctx.send("pong")
+@bot.tree.command(name="ping", description="Check if the bot is alive")
+async def ping(interaction: discord.Interaction):
+    await interaction.response.send_message("Pong!")
 
 
 @bot.command()
