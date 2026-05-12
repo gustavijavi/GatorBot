@@ -6,10 +6,10 @@ import os # allows script to read data from origin file path
 import asyncio # allows the bot to wait a certain amount of time
 import json # allows you to read and write to json files
 import requests # allows you to send requests to links to receive data
-from medal_api import MedalAPI # medal API functions grabbed from other repository since they're smarter than me :(
 from discord.ext import commands, tasks # command that allows looping every set amount of time within the bot
 from datetime import datetime # allows getting the date
 import aiohttp # better http requests for api
+from discord import app_commands
 
 # loads the .env file
 load_dotenv()
