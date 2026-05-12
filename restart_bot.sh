@@ -3,6 +3,6 @@
 cd /home/pi/GatorBot
 git pull
 
-sudo systemctl restart discord-bot
+sudo systemctl restart GatorBot
 
 echo "Bot restarted successfully"
